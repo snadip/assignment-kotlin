@@ -1,0 +1,477 @@
+{
+	"info": {
+		"_postman_id": "e3251c18-bf5b-482b-b03d-e8d551ce9f65",
+		"name": "bill_assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "add movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movieName\": \"Movie 110\",\r\n    \"movieReleaseDate\": \"2020-09-14\",\r\n    \"actors\": [\r\n        {\r\n            \"actorName\": \"Actor 101\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/movie/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"movie",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/movie/",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"movie",
+						""
+					]
+				},
+				"description": "Get all movies"
+			},
+			"response": []
+		},
+		{
+			"name": "get movie by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/movie/101",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"movie",
+						"101"
+					]
+				},
+				"description": "Get movie by ID"
+			},
+			"response": []
+		},
+		{
+			"name": "update movie",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movieName\": \"Movie 110\",\r\n    \"movieReleaseDate\": \"2020-09-14\",\r\n    \"movieID\": 1,\r\n    \"actors\": [\r\n        {\r\n            \"actorName\": \"Actor 101\",\r\n            \"actorID\": 1\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/movie/update",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"movie",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete movie",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/movie/delete/101",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"movie",
+						"delete",
+						"101"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add actor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"actorName\": \"Actor 101\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/actor/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"actor",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get actors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/actor/",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"actor",
+						""
+					]
+				},
+				"description": "Get all movies"
+			},
+			"response": []
+		},
+		{
+			"name": "get actor by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/actor/101",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"actor",
+						"101"
+					]
+				},
+				"description": "Get movie by ID"
+			},
+			"response": []
+		},
+		{
+			"name": "update actor",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"actorName\": \"Actor 101 Updated\",\r\n    \"actorID\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/actor/update",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"actor",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete actor",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/actor/delete/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"actor",
+						"delete",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update movie with unknown actor",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movieName\": \"Movie 110 Updated\",\r\n    \"movieReleaseDate\": \"2020-09-14\",\r\n    \"movieID\": 1,\r\n    \"actors\": [\r\n        {\r\n            \"actorName\": \"Actor 102\",\r\n            \"actorID\": 1\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/movie/update",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"movie",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update movie with duplicate actor",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movieName\": \"Movie 110 Updated\",\r\n    \"movieReleaseDate\": \"2020-09-14\",\r\n    \"movieID\": 1,\r\n    \"actors\": [\r\n        {\r\n            \"actorName\": \"Actor 101\",\r\n            \"actorID\": 1\r\n        },\r\n        {\r\n            \"actorName\": \"Actor 101\",\r\n            \"actorID\": 1\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/movie/update",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"movie",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update movie additional actor",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movieName\": \"Movie 110\",\r\n    \"movieReleaseDate\": \"2020-09-14\",\r\n    \"movieID\": 1,\r\n    \"actors\": [\r\n        {\r\n            \"actorName\": \"Actor 101\",\r\n            \"actorID\": 1\r\n        },\r\n        {\r\n            \"actorName\": \"Actor 102\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/movie/update",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"movie",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update movie no actors",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movieName\": \"Movie 110\",\r\n    \"movieReleaseDate\": \"2020-09-14\",\r\n    \"movieID\": 1,\r\n    \"actors\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/movie/update",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"movie",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add duplicate movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movieName\": \"Movie 110\",\r\n    \"movieReleaseDate\": \"2020-09-14\",\r\n    \"actors\": [\r\n        {\r\n            \"actorName\": \"Actor 101\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/movie/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"movie",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add movie with no actors",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movieName\": \"Movie 111\",\r\n    \"movieReleaseDate\": \"2020-09-14\",\r\n    \"actors\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/movie/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"movie",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add duplicate actor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"actorName\": \"Actor 103\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/actor/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"actor",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get movie by name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/movie/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"movie",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get actor by name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/actor/name/Actor 101",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"actor",
+						"name",
+						"Actor 101"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
+
